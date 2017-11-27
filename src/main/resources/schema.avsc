@@ -1,0 +1,10 @@
+{
+    "namespace": "BestExecutionMonitoring.avro",
+     "type": "record",
+     "name": "user",
+     "fields":[
+         {  "name": "id", "type": "int"},
+         {  "name": "name",  "type": "string"},
+         {  "name": "email", "type": ["string", "null"]}
+     ]
+}
