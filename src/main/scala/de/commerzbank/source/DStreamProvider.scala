@@ -16,7 +16,7 @@ import scala.util.Try
 
 object DStreamProvider {
   private val schemaString = Source.fromURL(getClass.getResource("/schema.avsc")).mkString
-  private val schema: Schema = new Schema.Parser().parse(schemaString)
+  private val schema = new Schema.Parser().parse(schemaString)
 
   def provide(ssc: StreamingContext): DStream[User] = {
     val Array(brokers, topics) = Array[String]("localhost:9092", "ptr.omega_bxm")
@@ -36,7 +36,7 @@ object DStreamProvider {
     val userData: GenericRecord = reader.read(null, decoder)
 
     User(userData.get("id").toString.toInt,
-      userData.get("name").toString,
-      Try(userData.get("email").toString).toOption)
+         userData.get("name").toString,
+     Try(userData.get("email").toString).toOption)
   }
 }

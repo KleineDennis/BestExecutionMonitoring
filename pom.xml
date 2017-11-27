@@ -41,7 +41,6 @@
             <groupId>org.apache.spark</groupId>
             <artifactId>spark-core_${scala.compat.version}</artifactId>
             <version>${spark.version}</version>
-            <scope>provided</scope>
         </dependency>
 
         <!-- Spark streaming -->
@@ -49,7 +48,6 @@
           <groupId>org.apache.spark</groupId>
           <artifactId>spark-streaming_${scala.compat.version}</artifactId>
           <version>${spark.version}</version>
-          <scope>provided</scope>
         </dependency>
 
         <!-- Spark SQL -->
@@ -57,7 +55,6 @@
             <groupId>org.apache.spark</groupId>
             <artifactId>spark-sql_${scala.compat.version}</artifactId>
             <version>${spark.version}</version>
-            <scope>provided</scope>
         </dependency>
 
         <!-- Spark streaming kafka -->
@@ -68,11 +65,11 @@
     		</dependency>
 
         <!-- Kafka clients only -->
-    		<dependency>
-    			<groupId>org.apache.kafka</groupId>
-    			<artifactId>kafka-clients</artifactId>
-    			<version>${kafka.version}</version>
-    		</dependency>
+    		<!--<dependency>-->
+    			<!--<groupId>org.apache.kafka</groupId>-->
+    			<!--<artifactId>kafka-clients</artifactId>-->
+    			<!--<version>${kafka.version}</version>-->
+    		<!--</dependency>-->
 
         <!-- Avro -->
         <dependency>
