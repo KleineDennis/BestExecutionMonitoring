@@ -25,3 +25,5 @@ target
 /.project
 /.settings
 /RUNNING_PID
+
+data.parquet
