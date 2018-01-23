@@ -39,4 +39,12 @@ object DStreamProvider {
          userData.get("name").toString,
      Try(userData.get("email").toString).toOption)
   }
+  
+  private def deserialize2(message: (Array[Byte], Array[Byte])): User = {
+    val reader = new SpecificDatumReader[User](schema)
+    val decoder: Decoder = DecoderFactory.get().binaryDecoder(message._2, null)
+    val data = reader.read(null, decoder)
+    data
+  }
+
 }
